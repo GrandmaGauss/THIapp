@@ -50,7 +50,7 @@
 				</tr>
 			</table>
 			<br>
-			<p>Du kannst deine Daten jederzeit im Profil ändern.</p>
+			<p>Du kannst deine Daten jederzeit im <a href="../Account/profile.jsp">Profil</a> ändern.</p>
 			<h4>Viel Spaß bei Platonic !</h4>
 		</div>
 	</div>
