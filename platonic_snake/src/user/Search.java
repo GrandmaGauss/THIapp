@@ -46,6 +46,7 @@ public class Search extends HttpServlet {
         
          //Weiterleiten an JSP
         final RequestDispatcher disp = request.getRequestDispatcher("jsp/Search/SearchPage.jsp");
+    
         disp.forward(request, response);
         
     }   
@@ -61,6 +62,7 @@ public class Search extends HttpServlet {
                     PreparedStatement pstmt = con.prepareStatement("SELECT * from users WHERE username LIKE ?")){
                         
                         pstmt.setString(1, username);
+                        
                                     
                         try (ResultSet rs = pstmt.executeQuery()){
                             
@@ -69,6 +71,9 @@ public class Search extends HttpServlet {
                                 
                              //   Long id = Long.valueOf(rs.getLong("id"));
                             //    user.setId(id);
+                                
+                                byte[] photo = rs.getBytes("photo");
+                                user.setPhoto(photo);
                                 
                                 String location = rs.getString("location");
                                 user.setLocation(location);
@@ -101,5 +106,7 @@ public class Search extends HttpServlet {
 	}
 
 }
+
+
 
 
