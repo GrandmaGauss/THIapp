@@ -73,7 +73,7 @@ public class UserCreationServlet extends HttpServlet {
         final HttpSession session = request.getSession();
         session.setAttribute("user", user);
         
-        final RequestDispatcher disp = request.getRequestDispatcher("jsp/Create/SaveData.jsp");
+        final RequestDispatcher disp = request.getRequestDispatcher("jsp/Create/NextPage.jsp");
         disp.forward(request, response);
     }
 
