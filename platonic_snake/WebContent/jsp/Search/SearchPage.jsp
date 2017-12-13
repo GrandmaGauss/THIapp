@@ -22,6 +22,7 @@
 	<div class = "ausrichtung">
 		<div class = "ausgabefeld">
 			<h2>Suchergebnisse</h2>
+			<emp>Bild:</emp><img src = "BildServlet?username=${user.username}">
 			<table>
 				<tr>
 					<th>Name</th>
@@ -30,12 +31,15 @@
 				</tr>
 				<c:forEach var="user" items="${users}" varStatus="status">
 					<tr>
+					
 						<td>${user.username}</td>
 						<td>${user.location}</td>
 						<td>${user.interests}</td>
 					</tr>
 					<c:if test="${not status.last}">,</c:if>
 				</c:forEach>
+				<form method = "post" action ="/platonic_snake/Profil">
+				 <a href="profil.jsp">Profil</a>
 			</table>
 		</div>
 	</div>
@@ -48,5 +52,7 @@
 <%@ includefile="/jsp/Fragments/footer.jspf" %>
 </body>
 </html>
+
+
 
 
