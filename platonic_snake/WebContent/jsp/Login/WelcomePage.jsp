@@ -6,7 +6,7 @@
 	<base href="${pageContext.request.requestURI}" />
 	<meta charset="ISO-8859-1">
 	<link rel="stylesheet" href="../../css/style1.css" type="text/css">
-	<title>your data</title>
+	<title>Willkommen</title>
 </head>
 <body>
 <%@ includefile="/jsp/Fragments/header.jspf" %>
