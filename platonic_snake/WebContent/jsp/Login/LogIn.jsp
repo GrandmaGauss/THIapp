@@ -20,10 +20,10 @@
 			<h1>Log In</h1>
 			<form method = "post" action="/platonic_snake/LoginServlet"> <!-- anstatt Login, LoginServlet anstatt LoginServlet1, LoginServlet -->
 				<label for = "username">Username:</label>
-				<input type="text" name= "username" SIZE=20><br> 
+				<input type="text" name= "username" size=20 required><br> 
 				<br>
 				<label for = "password">Passwort:</label>
-				<input type="password" name= "password" SIZE=20><br>
+				<input type="password" name= "password" size=20 required><br>
 				<br>
 				<input type = "submit" value="login"/>
 			</form>
