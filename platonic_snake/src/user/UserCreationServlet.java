@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.annotation.Resource;
 import javax.servlet.RequestDispatcher;
@@ -34,6 +35,9 @@ public class UserCreationServlet extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
+    
+    
+    
     public UserCreationServlet() {
         super();
         // TODO Auto-generated constructor stub
@@ -68,13 +72,13 @@ public class UserCreationServlet extends HttpServlet {
             catch(IOException ex) {
                 throw new ServletException(ex.getMessage());
             }
-        persist(user);
+        persist(user, request, response);
         
         final HttpSession session = request.getSession();
         session.setAttribute("user", user);
         
-        final RequestDispatcher disp = request.getRequestDispatcher("jsp/Create/NextPage.jsp");
-        disp.forward(request, response);
+     //   final RequestDispatcher disp = request.getRequestDispatcher("jsp/Create/SaveData.jsp");
+      //  disp.forward(request, response);
     }
 
     /**
@@ -85,26 +89,51 @@ public class UserCreationServlet extends HttpServlet {
         doGet(request, response);
     }
     
-    public void persist(UserBean user) throws ServletException {
-        try (Connection con = ds.getConnection(); PreparedStatement pstmt = con.prepareStatement("INSERT INTO users (username,email,password,birthday,location,interests,photo) VALUES (?,?,?,?,?,?,?)")){
-            pstmt.setString(1,user.getUsername());
-            pstmt.setString(2, user.getEmail());
-            pstmt.setString(3, user.getPassword());
-            pstmt.setString(4, user.getBirthday());
-            pstmt.setString(5, user.getLocation());
-            pstmt.setString(6, user.getInterests());
-            //pstmt.setString(7, user.getFilename());
-            pstmt.setBytes(7, user.getPhoto());
-            pstmt.executeUpdate();
+    public void persist(UserBean user, HttpServletRequest request, HttpServletResponse response) throws ServletException {
+       
+        try {
             
-        }
-        catch(Exception ex) {
-            throw new ServletException(ex.getMessage());
-        }
-        
+            
+            Connection con = ds.getConnection();
+            String uname = request.getParameter("username");
+            PreparedStatement pstmt = con.prepareStatement("SELECT * from users WHERE username = ?");
+            pstmt.setString(1,  uname);
+            ResultSet rs = pstmt.executeQuery();
+            
+            if (!rs.next()){
+                try (Connection con2 = ds.getConnection(); PreparedStatement pstmt2 = con2.prepareStatement("INSERT INTO users (username,email,password,birthday,location,interests,photo) VALUES (?,?,?,?,?,?,?)")){
+                    pstmt2.setString(1,user.getUsername());
+                    pstmt2.setString(2, user.getEmail());
+                    pstmt2.setString(3, user.getPassword());
+                    pstmt2.setString(4, user.getBirthday());
+                    pstmt2.setString(5, user.getLocation());
+                    pstmt2.setString(6, user.getInterests());
+                    //pstmt.setString(7, user.getFilename());
+                    pstmt2.setBytes(7, user.getPhoto());
+                    pstmt2.executeUpdate();
+                   
+                    final RequestDispatcher rd=request.getRequestDispatcher("jsp/Create/SaveData.jsp");  //in"" stand vorher WelcomeServlet
+                    rd.forward(request,response); 
+                }
+                
+            }
+              
+                else
+                {
+                    System.out.println("Username existiert bereits");
+                    final RequestDispatcher rd=request.getRequestDispatcher("jsp/Create/GetData2.jsp");  
+                    rd.include(request,response);
+                
+                }
     }
+    
 
-}
+            catch (Exception e){
+                System.out.println(e);  
+            }
+    }          
+  }
+
 
 
 
