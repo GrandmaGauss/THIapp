@@ -1,20 +1,60 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<jsp:useBean id="user" class="user.UserData" scope="session"/>
-<jsp:setProperty name="user" property="*"/>
+<!DOCTYPE html>
 <html>
 <head>
-<base href="${pageContext.request.requestURI}"/>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>View</title>
+<link rel="stylesheet" href="../../css/style1.css" type="text/css">
+	<title>Dein Profil</title>
+<base href="${pageContext.request.requestURI}" />
 </head>
+<body>
+<%@ includefile="/jsp/Fragments/header.jspf" %>
 
+<div class = "left">
+<br>
+</div>
 
- <body>
-     <A HREF="NextPage.jsp">Continue</A>
+<main>
+	<div class = "ausrichtung">
+		<div class = "formularfeld">
+			<base href="${pageContext.request.requestURI}" />
+		<h1>Hier siehst du dein Profil. Viel Spaß auf Platonic!</h1>
+		<emp>Bild:</emp><img src = "/platonic_snake/BildServlet?username=${user.username}">
+		
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Passwort</th>
+				<th>Geburtstag</th>
+				<th>Wohnort</th>
+				<th>Interessen</th>
+				
+			</tr>
+			
+				<tr>
+					<td>${user.username}</td>
+					<td>${user.email}</td>
+					<td>${user.password}</td>
+					<td>${user.birthday}</td>
+					<td>${user.location}</td>
+					<td>${user.interests}</td>
+					
+				</tr>
 
+				</table>
+		
+			</form>
+		</div>
+	</div>
+</main>
+
+<div class = "right">
+<br>
+</div>
+
+<%@ includefile="/jsp/Fragments/footer.jspf" %>
 </body>
 </html>
 
