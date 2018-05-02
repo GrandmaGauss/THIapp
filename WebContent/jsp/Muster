@@ -23,7 +23,7 @@
   </head>
 <body>
 
-<%@ includefile="/jsp/Fragments/header.jspf" %>
+<%@ includefile="/jsp/fragments/header.jspf" %>
 
     <div class="container">
         <div class="row">
@@ -34,7 +34,7 @@
         </div>
       </div>
 
-<%@ includefile="/jsp/Fragments/footer.jspf" %>
+<%@ includefile="/jsp/fragments/footer.jspf" %>
 
 </body>
 </html>
