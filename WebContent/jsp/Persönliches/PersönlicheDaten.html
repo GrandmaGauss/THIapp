@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Persönliche Daten</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+  </head>
+<body>
+
+<%@ includefile="/jsp/Fragments/header.jspf" %>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1>Persönliches</h1>
+           
+           <form>
+           <fieldset>
+           <img src="../../img/Persönliches.jpg" alt="Profilbild">
+            <p>
+            	<table>
+            		<th>Persönliche Daten</th>
+            		<tr><td>Mat.-Nr.:00012345</td></tr>
+            		<tr><td><a href ="WeitereDetails.html">Weitere Details abrufen</a></td></tr>
+            	</table>
+            </p>
+            </fieldset>
+            </form> 
+            
+            <form>
+            	<fieldset>
+            	<table>
+            	<th>Studienfortschritt</th>
+            	</table>
+            	<img src="../../img/Studienfortschritt.jpg" alt="Semesterfortschrittsdiagramm" usemap="#Map">
+            	<map name="Map" id="Map">
+    			<area alt="" title="" href="Studienfortschritt.html" shape="rect" coords="92,42" />
+    			<area alt="" title="" href="Studienfortschritt.html" shape="poly" coords="122,37,70,59,85,53,51,80,136,33,147,26,147,38,125,30,107,38,87,47,74,49,60,62,51,73,47,78" />
+    			[...]
+				</map>
+            	<p>Rückgemeldet</p>
+            	</fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+
+<%@ includefile="/jsp/Fragments/footer.jspf" %>
+
+</body>
+</html>
