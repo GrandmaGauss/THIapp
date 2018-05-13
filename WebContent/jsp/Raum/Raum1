@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
 
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Räume</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../../css/grayscale.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="../../index.html">&#8592</a>
+        <h2>Räume<a href="../Raum/Lageplan.html">
+ 					<img src="../../img/Standort.png" width="50" height="50"  />
+					</a></h2>
+		
+        <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>-->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                    
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#download">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+   
+
+   <!-- About Section -->
+    <section id="about" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+	          <div class="dozenten">
+	          
+	                  <h2>Räume<a href="../Raum/Lageplan.html">
+ 					<img src="../../img/Standort.png" width="50" height="50"  />
+					</a></h2>
+					
+	            <h3>Freie Räume vom 07.05. - 09.05.2018</h3>
+	            <ul>
+	            <table>
+	            
+	           
+	            <ul>
+  					<li>Montag, 07.05.2018</li>
+  				 <tr>
+ 					 <li> 08:15 - 13:05 Uhr: B101, B200, C102, C101, D303, D202, G215, G201, G302</li>
+ 					 <li> 13:15 - 15:40 Uhr: B202, B205, C103, C101, D303, G201, G302</li>
+ 					 <li> 15:40 - 18:15 Uhr: B101, B200, C102, C101, D303, D202, G215, G201, G302</li>
+				</ul>
+				</tr>
+				
+						<p></p>
+				
+	            <ul>
+  					<li>Dienstag, 08.05.2018</li>
+  				<tr>
+ 					 <li> 08:15 - 13:05 Uhr: B101, B200, C102, C101, D303, D202, G215, G201, G302</li>
+ 					 <li> 13:15 - 15:40 Uhr: B202, B205, C103, C101, D303, G201, G302</li>
+ 					 <li> 15:40 - 18:15 Uhr: B101, B200, C102, C101, D303, D202, G215, G201, G302</li>
+				</ul>
+				</tr>
+				
+						<p></p>
+				
+			     <ul>
+  						<li>Mittwoch, 09.05.2018</li>
+  				<tr>
+ 					 <li> 08:15 - 13:05 Uhr: B101, B200, C102, C101, D303, D202, G215, G201, G302</li>
+ 					 <li> 13:15 - 15:40 Uhr: B202, B205, C103, C101, D303, G201, G302</li>
+ 					 <li> 15:40 - 18:15 Uhr: B101, B200, C102, C101, D303, D202, G215, G201, G302</li>
+				</ul>
+				</tr>
+	            </table>
+	              
+	            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="navbarbot">
+		  <a href="#home">Meine Räume</a>
+		  <a href="#news">Gebäude A - G</a>
+		   <a href="../Raum/Raumsuche.html">Suche</a>
+		</div> 
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../../js/grayscale.min.js"></script>
+    
+
+  </body>
+
+</html>
